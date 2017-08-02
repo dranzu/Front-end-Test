@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+<style type="text/css" media="screen">
+
+    @font-face {
+        font-family: 'elkjopregular';
+        src: url('elkjop-webfont.eot');
+        src: url('elkjop-webfont.eot?#iefix') format('embedded-opentype'),
+        url('elkjop-webfont.woff') format('woff'),
+        url('elkjop-webfont.ttf') format('truetype'),
+        url('elkjop-webfont.svg#elkjopregular') format('svg');
+        font-weight: normal;
+        font-style: normal;
+    }
+
+    html{
+        height: 768px;
+    }
+
+    body {
+        margin: 0;
+        padding: 0;
+    }
+
+    #container {
+        width: 1024px;
+        height: 768px;
+        background-image: url('background.png');
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position: center;
+        background-size: contain;
+    }
+
+    #op1{
+        top: 270px;
+    }
+
+    #op2{
+        top: 350px;
+    }
+
+    #op3{
+        top: 430px;
+    }
+
+    #op4{
+        top: 510px;
+    }
+
+    #op5{
+        top: 590px;
+    }
+
+    .boton {
+        position: absolute;
+        width: 690px;
+        height: 310px;
+        left: 100px;
+        font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        text-align: left;
+        color: #051853;
+        border: 3px solid white;
+        border-radius: 13px;
+        padding-top: 10px;
+        padding-bottom: 3px;
+        padding-left: 25px;
+        font-size: 28px;
+    }
+
+    #logo{
+        position: absolute;
+        width: 209px;
+        background-image: url('logo.png');
+        height: 83px;
+        background-size: contain;
+        top: 30px;
+        left: 40px;
+    }
+
+    #question{
+        position: absolute;
+        background-color: #88D100;
+        font-family: elkjopregular;
+        font-size: 36px;
+        top: 160px;
+        left: 250px;
+        padding: 20px 30px;
+        color: #051853;
+        text-transform: uppercase;
+    }
+    #close{
+        position: absolute;
+        background-color: #88D100;
+        font-family: elkjopregular;
+        font-size: 36px;
+        top: 610px;
+        left: 450px;
+        padding: 20px 30px;
+        color: #051853;
+        text-transform: uppercase;
+    }
+    #gonext{
+        position: absolute;
+        width: 90px;
+        height: 90px;
+        background-image: url('arrownext.png');
+        top: 370px;
+        left: 880px;
+    }
+
+    #epost{
+        top: 310px;
+    }
+
+    #phone{
+        top: 410px;
+    }
+    input{
+        position: absolute;
+        width: 400px;
+        left: 290px;
+        font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        text-align: center;
+        color: white;
+        border: 3px solid white;
+        border-radius: 13px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        font-size: 28px;
+        background-color: rgba(0, 0, 0, 0);
+    }
+
+    #aditionaltext1{
+        position: absolute;
+        font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        color: white;
+        font-size: 28px;
+        top: 250px;
+        width: 500px;
+        text-align: center;
+        left: 280px;
+    }
+    #time{
+        position: absolute;
+        text-align: center;
+        font-size: 200px;
+        color: #88D100;
+        font-family: elkjopregular;
+        left: 410px;
+        top: 370px;
+        width: 200px;
+    }
+
+
+    #gavekortet{
+        position: absolute;
+        text-align: left;
+        background-color: #88D100;
+        font-family: elkjopregular;
+        font-size: 36px;
+        top: 300px;
+        padding: 20px;
+        left: 130px;
+        color: #051853;
+        text-transform: uppercase;
+    }
+
+</style>
+<!-- HTML -->
+<div id="container">
+    <div id="logo"></div>
+    <div id="gavekortet">DU ER MED I TREKNINGEN OG VIL MOTTA<br> EN SMS DERSOM DU ER DEN HELDIGE VINNEREN</div>
+</div>
+
+
+<!-- JavaScript -->
+<script src="js/jquery.js"></script>
+<script src="js/bubbly.js"></script>
+<script>
+    setTimeout(function () {
+        BM.goHome();
+    }, 10000);
+</script>
+</body>
+</html>

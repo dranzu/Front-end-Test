@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+    <style type="text/css" media="screen">
+
+    @font-face {
+        font-family: 'elkjopregular';
+        src: url('elkjop-webfont.eot');
+        src: url('elkjop-webfont.eot?#iefix') format('embedded-opentype'),
+             url('elkjop-webfont.woff') format('woff'),
+             url('elkjop-webfont.ttf') format('truetype'),
+             url('elkjop-webfont.svg#elkjopregular') format('svg');
+        font-weight: normal;
+        font-style: normal;
+    }
+
+    html{
+        height: 768px;
+    }
+
+    body {
+        margin: 0;
+        padding: 0;
+    }
+
+    #container {
+        width: 1024px;
+        height: 768px;
+        background-image: url('background.png');
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position: center; 
+        background-size: contain;
+    }
+
+    #opdata{
+        top: 304px;
+    }    
+    #opmobil{
+        top: 390px;
+    }    
+    #oplyd{
+	    top: 470px;
+    }
+
+    #appliances{
+        top: 304px;
+    }
+    #households{
+        top: 390px;
+    }
+    #kitchen{
+        top: 470px;
+    }
+    #knowhow{
+        top: 556px;
+        left: 407px;
+    }
+
+
+    .button-right {
+        position: absolute;
+        width: 240px;
+        height: 40px;
+        left: 180px;
+        font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        text-align: center;
+        color: white;
+        border: 3px solid white;
+        border-radius: 13px;
+        padding-top: 10px;
+        padding-bottom: 5px;
+        font-size: 28px;
+    }
+
+    .button-left {
+        position: absolute;
+        width: 240px;
+        height: 40px;
+        left: 635px;
+        font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        text-align: center;
+        color: white;
+        border: 3px solid white;
+        border-radius: 13px;
+        padding-top: 10px;
+        padding-bottom: 5px;
+        font-size: 28px;
+    }
+
+    #logo{
+        position: absolute;
+        width: 209px;
+        background-image: url('logo.png');
+        height: 83px;
+        background-size: contain;
+        top: 30px;
+        left: 40px;
+    }
+
+    #question{
+        position: absolute;
+        background-color: #88D100;
+        font-family: elkjopregular;
+        font-size: 36px;
+        top: 160px;
+        left: 200px;
+        padding: 20px 30px;
+        color: #051853;
+    }
+        
+    </style>
+    <div id="container">
+        <div id="logo"></div>
+        <div id="question">HVILKEN AVDELING BESØKTE DU I DAG?</div>
+    	<div id="opdata" class="button-right">Data</div>
+        <div id="opmobil" class="button-right">Mobil</div>
+	  	<div id="oplyd" class="button-right">Lyd og bilde</div>
+        <div id="appliances" class="button-left">Hvitevarer</div>
+        <div id="households" class="button-left">Husholdning</div>
+        <div id="kitchen" class="button-left">Kjøkken</div>
+        <div id="knowhow" class="button-left">Know How</div>
+    </div>
+
+    <script src="js/jquery.js"></script>
+    <script src="js/bubbly.js"></script>
+    <script>
+    localStorage.setItem('contactSlide', 5);
+    BM.setTransactionValue('#survey', 'elkjop-2015-01');
+    $('#opdata').on("touchstart", function() {
+        BM.setTransactionValue('#store:data', 'Data');
+        BM.goNext();
+    });
+    $('#opmobil').on("touchstart", function() {
+        BM.setTransactionValue('#store:mobil', 'Mobil');
+        BM.goNext();
+    });
+    $('#oplyd').on("touchstart", function() {
+        BM.setTransactionValue('#store:sound', 'Lyd');
+        BM.goNext();
+    });
+    $('#appliances').on("touchstart", function() {
+        BM.setTransactionValue('#store:appliances', $(this).html());
+        BM.goNext();
+    });
+    $('#households').on("touchstart", function() {
+        BM.setTransactionValue('#store:households', $(this).html());
+        BM.goNext();
+    });
+    $('#kitchen').on("touchstart", function() {
+        BM.setTransactionValue('#store:kitchen', $(this).html());
+        BM.goNext();
+    });
+    $('#knowhow').on("touchstart", function() {
+        BM.setTransactionValue('#store:knowhow', $(this).html());
+        BM.goNext();
+    });
+
+	</script>
+</body>
+</html>

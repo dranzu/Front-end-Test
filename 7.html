@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+    <style type="text/css" media="screen">
+
+    @font-face {
+        font-family: 'elkjopregular';
+        src: url('elkjop-webfont.eot');
+        src: url('elkjop-webfont.eot?#iefix') format('embedded-opentype'),
+             url('elkjop-webfont.woff') format('woff'),
+             url('elkjop-webfont.ttf') format('truetype'),
+             url('elkjop-webfont.svg#elkjopregular') format('svg');
+        font-weight: normal;
+        font-style: normal;
+    }
+
+    html{
+        height: 768px;
+    }
+
+    body {
+        margin: 0;
+        padding: 0;
+    }
+
+    #container {
+        width: 1024px;
+        height: 768px;
+        background-image: url('background.png');
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position: center;
+        background-size: contain;
+    }
+
+    #op1{
+        top: 270px;
+    }
+
+    #op2{
+        top: 350px;
+    }
+
+    #op3{
+        top: 430px;
+    }
+
+    #op4{
+        top: 510px;
+    }
+
+    #op5{
+        top: 590px;
+    }
+
+    #op6{
+        top: 670px;
+    }
+
+    .boton {
+        position: absolute;
+        width: 600px;
+        height: 40px;
+        left: 220px;
+        font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        text-align: left;
+        color: white;
+        border: 3px solid white;
+        border-radius: 13px;
+        padding-top: 10px;
+        padding-bottom: 5px;
+        padding-left: 25px;
+        font-size: 28px;
+    }
+
+    #logo{
+        position: absolute;
+        width: 209px;
+        background-image: url('logo.png');
+        height: 83px;
+        background-size: contain;
+        top: 30px;
+        left: 40px;
+    }
+
+    #question{
+        position: absolute;
+        background-color: #88D100;
+        font-family: elkjopregular;
+        font-size: 36px;
+        top: 160px;
+        left: 150px;
+        padding: 20px 30px;
+        color: #051853;
+        text-transform: uppercase;
+    }
+
+    </style>
+    <div id="container">
+        <div id="logo"></div>
+        <div id="question">Hva var du spesielt fornøyd med i dag?</div>
+        <div id="op1" class="boton">God Service</div>
+        <div id="op2" class="boton">Annet</div>
+
+    </div>
+
+    <script src="js/jquery.js"></script>
+    <script src="js/bubbly.js"></script>
+    <script>
+    var contact = parseInt(localStorage.getItem('contactSlide'));
+    th.touch('#op1', function (e) {
+        BM.setTransactionValue('#spesieltfornoyd:op1', '');
+        BM.goToStep(9);
+    });
+    th.touch('#op2', function (e) {
+        BM.goToStep(8);
+    });
+
+
+    </script>
+</body>
+</html>

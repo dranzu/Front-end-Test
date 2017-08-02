@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+</head>
+<style type="text/css" media="screen">
+        #logo{
+        position: absolute;
+        width: 209px;
+        background-image: url('logo.png');
+        height: 83px;
+        background-size: contain;
+        top: 30px;
+        left: 40px;
+    }
+        @font-face {
+        font-family: 'elkjopregular';
+        src: url('elkjop-webfont.eot');
+        src: url('elkjop-webfont.eot?#iefix') format('embedded-opentype'),
+             url('elkjop-webfont.woff') format('woff'),
+             url('elkjop-webfont.ttf') format('truetype'),
+             url('elkjop-webfont.svg#elkjopregular') format('svg');
+        font-weight: normal;
+        font-style: normal;
+    }
+</style>
+<body>
+
+    <div id="container">
+            <div id="logo"></div>
+        
+    <div id="confetti"></div>
+    <div id="winner">GRATULERER</span></div>
+        <div style="top:130px; color: white" id="question">PRØV LYKKEN! SPINN HJULET</div>
+
+        <div id="wheel">
+            <div id="inner-wheel">
+                <div class="sec"><span class="fa fa-meh-o"></span></div>
+                <div class="sec"><span class="fa fa-gift"></span></div>
+                <div class="sec"><span class="fa fa-meh-o"></span></div>
+                <div class="sec"><span class="fa fa-gift"></span></div>
+                <div class="sec"><span class="fa fa-meh-o"></span></div>
+                <div class="sec"><span class="fa fa-gift"></span></div>
+            </div>
+            <div id="spin">
+                <div id="inner-spin"></div>
+            </div>
+            <div id="shine"></div>
+        </div>
+    </div>
+	<script src="js/jquery.js"></script>
+    <script src="js/index.js"></script>
+	<script src="js/bubbly.js"></script>
+</body>
+
+</html>

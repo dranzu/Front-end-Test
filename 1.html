@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+    <style type="text/css" media="screen">
+        @font-face {
+            font-family: 'elkjopregular';
+            src: url('elkjop-webfont.eot');
+            src: url('elkjop-webfont.eot?#iefix') format('embedded-opentype'),
+            url('elkjop-webfont.woff') format('woff'),
+            url('elkjop-webfont.ttf') format('truetype'),
+            url('elkjop-webfont.svg#elkjopregular') format('svg');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        html {
+            height: 768px;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        #container {
+            width: 1024px;
+            height: 768px;
+            background-image: url('background.png');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: center;
+            background-size: contain;
+        }
+
+        .boton {
+            position: absolute;
+            width: 73px;
+            height: 53px;
+            top: 340px;
+            font-family: elkjopregular;
+            text-align: center;
+            color: #051853;
+            border: 3px solid white;
+            border-radius: 13px;
+            padding-top: 20px;
+            font-size: 28px;
+            background-color: #FFF;
+        }
+
+        #logo {
+            position: absolute;
+            width: 209px;
+            background-image: url('logo.png');
+            height: 83px;
+            background-size: contain;
+            top: 30px;
+            left: 40px;
+        }
+
+        #question {
+            position: absolute;
+            background-color: #88D100;
+            font-family: elkjopregular;
+            font-size: 36px;
+            top: 160px;
+            left: 170px;
+            padding: 20px 30px;
+            color: #051853;
+        }
+
+        #first {
+            left: 250px;
+        }
+
+        #second {
+            left: 350px;
+        }
+
+        #third {
+            left: 450px;
+        }
+
+        #four {
+            left: 550px;
+        }
+
+        #five {
+            left: 650px;
+        }
+
+        #six {
+            left: 750px;
+        }
+
+        #thumbsup {
+            background-image: url('thumbsup.png');
+            position: absolute;
+            top: 340px;
+            left: 850px;
+            width: 73px;
+            height: 73px;
+        }
+
+        #thumbsdown {
+            background-image: url('thumbsdown.png');
+            position: absolute;
+            top: 340px;
+            left: 150px;
+            width: 73px;
+            height: 73px;
+            background-position-y: -10px;
+        }
+
+        #badrating {
+            position: absolute;
+            font-family: elkjopregular;
+            top: 275px;
+            left: 155px;
+            text-align: center;
+            color: white;
+            line-height: 73px;
+            font-size: 28px;
+        }
+
+        #goodrating {
+            position: absolute;
+            font-family: elkjopregular;
+            top: 415px;
+            left: 742px;
+            text-align: center;
+            color: white;
+            line-height: 73px;
+            font-size: 28px;
+        }
+    </style>
+    <div id="container">
+        <div id="logo"></div>
+        <div id="question">Hvor fornøyd er du med Elkjøp utlevering i dag?</div>
+        <div id="thumbsup"></div>
+        <div id="first" class="boton">1</div>
+        <div id="second" class="boton">2</div>
+        <div id="third" class="boton">3</div>
+        <div id="four" class="boton">4</div>
+        <div id="five" class="boton">5</div>
+        <div id="six" class="boton">6</div>
+        <div id="thumbsdown"></div>
+        <div id="badrating">Lite fornøyd</div>
+        <div id="goodrating">Veldig fornøyd</div>
+    </div>
+
+    <script src="js/jquery.js"></script>
+    <script src="js/bubbly.js"></script>
+    <script>
+
+        function init() {
+        BM.setTransactionValue('#survey', 'Elkop-2017-06-service');
+    }
+
+        localStorage.setItem('contactSlide', '5');
+
+        th.touch('#first', function (e) {
+            init();
+            localStorage.setItem('happy', 'no');
+            localStorage.setItem('nextStep', '3');
+            BM.setTransactionValue('#rating:1', '1');
+            BM.goToStep(2);
+        });
+
+        th.touch('#second', function (e) {
+            init();
+            localStorage.setItem('happy', 'no');
+            localStorage.setItem('nextStep', '3');
+            BM.setTransactionValue('#rating:2', '2');
+            BM.goToStep(2);
+        });
+        th.touch('#third', function (e) {
+            init();
+            localStorage.setItem('happy', 'no');
+            localStorage.setItem('nextStep', '3');
+            BM.setTransactionValue('#rating:3', '3');
+            BM.goToStep(2);
+        });
+        th.touch('#four', function (e) {
+            init();
+            localStorage.setItem('happy', 'yes');
+            localStorage.setItem('nextStep', '4');
+            BM.setTransactionValue('#rating:4', '4');
+            BM.goToStep(7);
+        });
+        th.touch('#five', function (e) {
+            init();
+            localStorage.setItem('happy', 'yes');
+            localStorage.setItem('nextStep', '4');
+            BM.setTransactionValue('#rating:5', '5');
+            BM.goToStep(7);
+        });
+        th.touch('#six', function (e) {
+            init();
+            localStorage.setItem('happy', 'yes');
+            localStorage.setItem('nextStep', '4');
+            BM.setTransactionValue('#rating:6', '6');
+            BM.goToStep(7);
+        });
+    </script>
+</body>
+
+</html>
