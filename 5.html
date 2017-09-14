@@ -4,113 +4,21 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/style.css" type="text/css" media="screen" />    
+    <link rel="stylesheet" href="css/elkjop.css" type="text/css" media="screen" />
+    <style type="text/css" media="screen">
+        #op1 {
+            top: 320px;
+        }
+
+    </style>
 </head>
-<body>
-<style type="text/css" media="screen">
+<body id="html5">
 
-    @font-face {
-        font-family: 'elkjopregular';
-        src: url('elkjop-webfont.eot');
-        src: url('elkjop-webfont.eot?#iefix') format('embedded-opentype'),
-        url('elkjop-webfont.woff') format('woff'),
-        url('elkjop-webfont.ttf') format('truetype'),
-        url('elkjop-webfont.svg#elkjopregular') format('svg');
-        font-weight: normal;
-        font-style: normal;
-    }
-
-    html {
-        height: 768px;
-    }
-
-    body {
-        margin: 0;
-        padding: 0;
-    }
-
-    #container {
-        width: 1024px;
-        height: 768px;
-        background-image: url('background.png');
-        background-repeat: no-repeat;
-        background-attachment: fixed;
-        background-position: center;
-        background-size: contain;
-    }
-
-    #op1 {
-        top: 320px;
-    }
-
-    #op2 {
-        top: 350px;
-    }
-
-    #op3 {
-        top: 430px;
-    }
-
-    #op4 {
-        top: 510px;
-    }
-
-    #op5 {
-        top: 590px;
-    }
-
-    .boton {
-        position: absolute;
-        width: 690px;
-        height: 310px;
-        left: 100px;
-        font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-        text-align: left;
-        color: #051853;
-        border: 3px solid white;
-        border-radius: 13px;
-        padding-top: 10px;
-        padding-bottom: 3px;
-        padding-left: 25px;
-        font-size: 28px;
-    }
-
-    #logo {
-        position: absolute;
-        width: 209px;
-        background-image: url('logo.png');
-        height: 83px;
-        background-size: contain;
-        top: 30px;
-        left: 40px;
-    }
-
-    #question {
-        position: absolute;
-        background-color: #88D100;
-        font-family: elkjopregular;
-        font-size: 36px;
-        top: 160px;
-        left: 170px;
-        padding: 20px 30px;
-        color: #051853;
-        text-transform: uppercase;
-        text-align: center;
-    }
-
-    #gonext {
-        position: absolute;
-        width: 90px;
-        height: 90px;
-        background-image: url('arrownext.png');
-        top: 370px;
-        left: 880px;
-    }
-
-</style>
 <div id="container">
     <div id="logo"></div>
     <div id="question">Hva er årsaken til at du ikke er fornøyd?</div>
-    <textarea id="op1" name="op1" class="boton" placeholder="Skriv her:"></textarea>
+    <textarea id="op1" name="op1" class="boton boton_text" placeholder="Skriv her:"></textarea>
 
     <div id="gonext"></div>
 </div>
@@ -121,36 +29,14 @@
 
     th.touch('#gonext', function (e) {
         var val = $("#op1").val();
-        var bool = false;
+
         if (!val) {
-            $("#op1").css({
-                border: '10px solid red'
-            }).addClass('warning');
-            bool = false
+            $("#op1").addClass('warning');
         } else {
-            bool = true;
-        }
-        if (bool) {
-            BM.setTransactionValue('#arsak:comment', $('#op4').val());
+            BM.setTransactionValue('#arsak:comment', val);
             BM.goToStep(9);
         }
-        th.reset();
-    });
-    th.touch('#gonext', function (e) {
-        var val = $("#op1").val();
-        var bool = false;
-        if (!val) {
-            $("#op1").css({
-                border: '10px solid red'
-            }).addClass('warning');
-            bool = false
-        } else {
-            bool = true;
-        }
-        if (bool) {
-            BM.setTransactionValue('#arsak:comment', $('#op4').val());
-            BM.goToStep(9);
-        }
+
         th.reset();
     });
 

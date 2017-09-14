@@ -6,7 +6,7 @@ var clicks = 0;
 $(document).ready(function () {
 
     /*WHEEL SPIN FUNCTION*/
-    $('#wheel').on('pulsar', function () {
+    $('#wheel').on('click', function () {
         $(this).off();
         var times = localStorage.getItem("times");
         if (!times) localStorage.setItem("times", 0);
@@ -14,15 +14,16 @@ $(document).ready(function () {
         localStorage.setItem("times", times);
         //add 1 every click
         clicks++;
-        console.log('clicks' + clicks)
-		/*multiply the degree by number of clicks
+
+        /*multiply the degree by number of clicks
 	  generate random number between 1 - 360,
     then add to the new degree*/
 
-        var newDegree = degree;
+/*        var newDegree = degree;
         var extraDegree = Math.floor(Math.random() * (360)) + 1;
-        totalDegree = newDegree + extraDegree;
+        totalDegree = newDegree + extraDegree;*/
         var everyXtime = BUBBLY.values.everyXtime || 10;
+        console.log(everyXtime);
         if ((times % everyXtime) == 0) {
             totalDegree = 3600;
             setTimeout(function () {

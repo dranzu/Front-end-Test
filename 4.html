@@ -5,41 +5,9 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-</head>
-
-<body>
+    <link rel="stylesheet" href="css/style.css" type="text/css" media="screen" />    
+    <link rel="stylesheet" href="css/elkjop.css" type="text/css" media="screen" />
     <style type="text/css" media="screen">
-        @font-face {
-            font-family: 'elkjopregular';
-            src: url('elkjop-webfont.eot');
-            src: url('elkjop-webfont.eot?#iefix') format('embedded-opentype'),
-            url('elkjop-webfont.woff') format('woff'),
-            url('elkjop-webfont.ttf') format('truetype'),
-            url('elkjop-webfont.svg#elkjopregular') format('svg');
-            font-weight: normal;
-            font-style: normal;
-        }
-
-
-        html {
-            height: 768px;
-        }
-
-        body {
-            margin: 0;
-            padding: 0;
-        }
-
-        #container {
-            width: 1024px;
-            height: 768px;
-            background-image: url('background.png');
-            background-repeat: no-repeat;
-            background-attachment: fixed;
-            background-position: center;
-            background-size: contain;
-        }
-
         #op1 {
             top: 270px;
         }
@@ -56,103 +24,20 @@
             top: 510px;
         }
 
-        #op5 {
-            top: 590px;
-        }
-
-        #op6 {
-            top: 310px;
-            left: 550px;
-        }
-
-        #op7 {
-            top: 390px;
-            left: 550px;
-        }
-
-        #op8 {
-            top: 470px;
-            left: 550px;
-        }
-
-        #op9 {
-            top: 550px;
-            left: 550px;
-        }
-
-        .boton {
-            position: absolute;
-            width: 580px;
-            height: 40px;
-            left: 220px;
-            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-            text-align: center;
-            color: white;
-            border: 3px solid white;
-            border-radius: 13px;
-            padding-top: 10px;
-            padding-bottom: 5px;
-            font-size: 28px;
-        }
-
-        .boton1 {
-            position: absolute;
-            width: 580px;
-            height: 40px;
-            left: 220px;
-            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-            text-align: center;
-            color: #061a52;
-            border: 3px solid white;
-            border-radius: 13px;
-            padding-top: 10px;
-            padding-bottom: 5px;
-            font-size: 28px;
-        }
-
-        #logo {
-            position: absolute;
-            width: 209px;
-            background-image: url('logo.png');
-            height: 83px;
-            background-size: contain;
-            top: 30px;
-            left: 40px;
-        }
-
-        #question {
-            position: absolute;
-            background-color: #88D100;
-            font-family: elkjopregular;
-            font-size: 35px;
-            top: 160px;
-            left: 145px;
-            padding: 20px 30px;
-            color: #051853;
-            text-transform: uppercase;
-            width: 700px;
-        }
-
-        #gonext {
-            position: absolute;
-            width: 90px;
-            height: 90px;
-            background-image: url('arrownext.png');
-            top: 370px;
-            left: 880px;
-        }
-
-        input {
+        #op4.boton {
             color: #061a52;
         }
     </style>
+</head>
+
+<body id="html4">
     <div id="container">
         <div id="logo"></div>
         <div id="question">Fortell oss gjerne om din opplevelse:</div>
-        <div id="op1" class="boton">Mangel på kunnskap</div>
-        <div id="op2" class="boton">Uinteressert i meg som kunde</div>
-        <div id="op3" class="boton">Lite imøtekommende </div>
-        <textarea id="op4" name="op4" class="boton1" placeholder="Annet"></textarea>
+        <div id="op1" class="boton boton_text">Mangel på kunnskap</div>
+        <div id="op2" class="boton boton_text">Uinteressert i meg som kunde</div>
+        <div id="op3" class="boton boton_text">Lite imøtekommende </div>
+        <textarea id="op4" name="op4" class="boton boton_text" placeholder="Annet"></textarea>
         <div id="gonext"></div>
     </div>
 
@@ -176,11 +61,9 @@
         });
         function validate(id) {
             var val = $(id).val();
-            console.log("validate text " + id + " val=" + val)
+
             if (!val) {
-                $("#op1, #op2, #op3, #op4").css({
-                    border: '10px solid red'
-                }).addClass('warning');
+                $("#op4").addClass('warning');
                 return false
             } else {
                 return true;

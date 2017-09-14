@@ -2,146 +2,53 @@
 <html>
 
 <head>
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/style.css" type="text/css" media="screen" />    
+    <link rel="stylesheet" href="css/elkjop.css" type="text/css" media="screen" />    
+    <style type="text/css" media="screen">
+        #op1 {
+            top: 320px;
+        }
+        
+    </style>
 </head>
 
-<body>
-<style type="text/css" media="screen">
-@font-face {
-font-family: 'elkjopregular';
-src: url('elkjop-webfont.eot');
-src: url('elkjop-webfont.eot?#iefix') format('embedded-opentype'),
-url('elkjop-webfont.woff') format('woff'),
-url('elkjop-webfont.ttf') format('truetype'),
-url('elkjop-webfont.svg#elkjopregular') format('svg');
-font-weight: normal;
-font-style: normal;
-}
+<body id="html8">
+    <div id="container">
+        <div id="logo"></div>
+        <div id="question">Hva var du spesielt fornøyd med i dag?</div>
+        <textarea id="op1" name="op1" class="boton boton_text" placeholder="Skriv her:"></textarea>
+        <div id="gonext"></div>
+    </div>
 
-html {
-height: 768px;
-}
+    <script src="js/jquery.js"></script>
+    <script src="js/bubbly.js"></script>
 
-body {
-margin: 0;
-padding: 0;
-}
+    <script>
+        function a(id) {
+            var val = $(id).val();
 
-#container {
-width: 1024px;
-height: 768px;
-background-image: url('background.png');
-background-repeat: no-repeat;
-background-attachment: fixed;
-background-position: center;
-background-size: contain;
-}
+            if (true) {
+                if (!val) {
+                    $(id).addClass('warning');
+                    return false
+                } else {
+                    return true;
+                }
+            }
+        }
 
-#op1 {
-top: 320px;
-}
+        th.touch('#gonext', function(e) {
+            if (a("#op1")) {
+                BM.setTransactionValue('#spesieltfornoyd:op2', $('#op1').val()); // 12
+                BM.goToStep(9);
+            }
+            th.reset();
+        });
 
-#op2 {
-top: 350px;
-}
-
-#op3 {
-top: 430px;
-}
-
-#op4 {
-top: 510px;
-}
-
-#op5 {
-top: 590px;
-}
-
-.boton {
-position: absolute;
-width: 690px;
-height: 310px;
-left: 100px;
-font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-text-align: left;
-color: #051853;
-border: 3px solid white;
-border-radius: 13px;
-padding-top: 10px;
-padding-bottom: 3px;
-padding-left: 25px;
-font-size: 28px;
-}
-
-#d1 {
-position: absolute;
-width: 209px;
-background-image: url('logo.png');
-height: 83px;
-background-size: contain;
-top: 30px;
-left: 40px;
-}
-
-#d2 {
-position: absolute;
-background-color: #88D100;
-font-family: elkjopregular;
-font-size: 36px;
-top: 160px;
-left: 170px;
-padding: 20px 30px;
-color: #051853;
-text-transform: uppercase;
-text-align: center;
-}
-
-#gonext {
-position: absolute;
-width: 90px;
-height: 90px;
-background-image: url('arrownext.png');
-top: 370px;
-left: 880px;
-}
-
-</style>
-<div id="container">
-<div id="d1"></div>
-<div id="d2">Hva var du spesielt fornøyd med i dag?</div>
-<textarea id="op1" name="op1" class="boton" placeholder="Skriv her:"></textarea>
-<div id="gonext"></div>
-</div>
-<script src="js/jquery.js"></script>
-<script src="js/bubbly.js"></script>
-<script>
-function a(id) {
-var val = $(id).val();
-console.log("validate text " + id + " val=" + val)
-if (true) {
-
-if (!val) {
-$(id).css({
-border: '10px solid red'
-}).addClass('warning');
-return false
-} else {
-return true;
-}
-}
-}
-
-th.touch('#gonext', function(e) {
-if (a("#op1")) {
-BM.setTransactionValue('#spesieltfornoyd:op2', $('#op1').val()); // 12
-BM.goToStep(9);
-}
-th.reset();
-});
-
-</script>
+    </script>
 </body>
 
 </html>

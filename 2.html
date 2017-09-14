@@ -1,44 +1,13 @@
-<!<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-</head>
-
-<body>
-    <style type="text/css" media="screen">
-        @font-face {
-            font-family: 'elkjopregular';
-            src: url('elkjop-webfont.eot');
-            src: url('elkjop-webfont.eot?#iefix') format('embedded-opentype'),
-            url('elkjop-webfont.woff') format('woff'),
-            url('elkjop-webfont.ttf') format('truetype'),
-            url('elkjop-webfont.svg#elkjopregular') format('svg');
-            font-weight: normal;
-            font-style: normal;
-        }
-
-        html {
-            height: 768px;
-        }
-
-        body {
-            margin: 0;
-            padding: 0;
-        }
-
-        #container {
-            width: 1024px;
-            height: 768px;
-            background-image: url('background.png');
-            background-repeat: no-repeat;
-            background-attachment: fixed;
-            background-position: center;
-            background-size: contain;
-        }
-
+    <link rel="stylesheet" href="css/style.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="css/elkjop.css" type="text/css" media="screen" />
+    <style type="text/css" media="screen" >
         #op1 {
             top: 270px;
         }
@@ -55,85 +24,17 @@
             top: 510px;
         }
 
-        #op5 {
-            top: 590px;
-        }
+    </style>    
+</head>
 
-        #op6 {
-            top: 670px;
-        }
-
-        .boton {
-            position: absolute;
-            width: 600px;
-            height: 40px;
-            left: 220px;
-            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-            text-align: left;
-            color: white;
-            border: 3px solid white;
-            border-radius: 13px;
-            padding-top: 10px;
-            padding-bottom: 5px;
-            padding-left: 25px;
-            font-size: 28px;
-        }
-
-        #logo {
-            position: absolute;
-            width: 209px;
-            background-image: url('logo.png');
-            height: 83px;
-            background-size: contain;
-            top: 30px;
-            left: 40px;
-        }
-
-        #question {
-            position: absolute;
-            background-color: #88D100;
-            font-family: elkjopregular;
-            font-size: 36px;
-            top: 160px;
-            left: 150px;
-            padding: 20px 30px;
-            color: #051853;
-            text-transform: uppercase;
-        }
-
-        #gonext {
-            position: absolute;
-            width: 90px;
-            height: 90px;
-            background-image: url('arrownext.png');
-            top: 370px;
-            left: 880px;
-        }
-
-
-        .boton1 {
-            position: absolute;
-            width: 631px;
-            height: 61px;
-            left: 220px;
-            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-            text-align: center;
-            color: #061a52;
-            border: 3px solid white;
-            border-radius: 13px;
-            padding-top: 10px;
-            padding-bottom: 5px;
-            padding-left: 25px;
-            font-size: 28px;
-        }
-    </style>
+<body id="html2">
     <div id="container">
         <div id="logo"></div>
         <div id="question">Hva er årsaken til at du ikke er fornøyd?</div>
-        <div id="op1" class="boton">For lang ventetid</div>
-        <div id="op2" class="boton">Dårlig kundebehandling</div>
-        <div id="op3" class="boton">Selger hadde lite kunnskap om varen</div>
-        <div id="op4" class="boton">Annet</div>
+        <div id="op1" class="boton boton_text">For lang ventetid</div>
+        <div id="op2" class="boton boton_text">Dårlig kundebehandling</div>
+        <div id="op3" class="boton boton_text">Selger hadde lite kunnskap om varen</div>
+        <div id="op4" class="boton boton_text">Annet</div>
     </div>
 
     <script src="js/jquery.js"></script>

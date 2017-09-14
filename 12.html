@@ -5,34 +5,14 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css" media="screen">
+    <link rel="stylesheet" href="css/elkjop.css" type="text/css" media="screen" />    
 </head>
-<style type="text/css" media="screen">
-body {
-    color: white;
-}
 
-#logo {
-    position: absolute;
-    width: 209px;
-    background-image: url('logo.png');
-    height: 83px;
-    background-size: contain;
-    top: 30px;
-    left: 40px;
-}
 
-@font-face {
-    font-family: 'elkjopregular';
-    src: url('elkjop-webfont.eot');
-    src: url('elkjop-webfont.eot?#iefix') format('embedded-opentype'), url('elkjop-webfont.woff') format('woff'), url('elkjop-webfont.ttf') format('truetype'), url('elkjop-webfont.svg#elkjopregular') format('svg');
-    font-weight: normal;
-    font-style: normal;
-}
-</style>
-
-<body>
+<body id="html12">
     <div id="container">
+        <div id="logo"></div>
         <div id="question">Tusen takk for din tilbakemelding. </br>
             <br/>Du vant ikke gave denne gangen.
             <br/>
@@ -42,7 +22,7 @@ body {
     </div>
     <script src="js/jquery.js"></script>
     <script src="js/bubbly.js"></script>
-    <script src="js/survey.js"></script>
+    <!--<script src="js/survey.js"></script>-->
     <script>
     //BM.setTransactionValue('#lucky:no', '');
     BM.setTransactionValue('#contact:fulfilled', 'unlucky');
