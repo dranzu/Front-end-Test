@@ -1,0 +1,222 @@
+#question {
+    left: 40px;
+    width: 924px;
+    text-transform: none;
+    background-color: #88D100;
+    font-family: elkjopregular;
+    font-size: 36px;
+    padding: 20px 10px;
+    color: #051853;
+    text-align: center;
+}
+
+.boton {
+    position: absolute;
+    border: 3px solid white;
+    border-radius: 13px;
+    font-size: 28px;
+    font-family: elkjopregular;    
+}
+
+.boton_text {
+    width: 600px;
+    height: 40px;
+    left: 220px;
+    text-align: center;
+    color: white;
+    padding-top: 10px;
+    padding-bottom: 5px;
+    padding-left: 25px;
+    width: 600px;            
+}
+
+[id^="op"].boton {
+    width: 600px !important;
+}
+
+#gonext {
+    position: absolute;
+    width: 90px;
+    height: 90px;
+    background-image: url('../img/arrownext.png');
+    top: 370px;
+    left: 880px;
+}
+
+.warning {
+    border: 10px solid red;    
+}
+
+textarea.boton {
+    width: 690px;
+    height: 310px;
+    left: 220px;
+    text-align: left;
+    color: #051853;
+    padding-bottom: 3px;
+} 
+::-webkit-input-placeholder {
+    color: white;
+}
+
+.contact::-webkit-input-placeholder {
+    padding-top: 15px !important;
+}
+
+.contact {
+    border-color: white;
+}
+
+#wrongcode {
+    position: absolute;
+    text-align: center;
+    font-family: 'oswaldbold', sans-serif;
+    font-weight: bold;
+    font-size: 60px;
+    top: 450px;
+    width: 100%;
+    color: red;
+    text-transform: uppercase;
+}
+
+
+
+/* 1 */
+#html1 .boton {
+    width: 73px;
+    height: 53px;
+    top: 340px;
+    text-align: center;
+    color: #051853;
+    padding-top: 20px;
+    background-color: #FFF;
+}
+
+#thumbsup {
+    background-image: url('../img/thumbsup.png');
+    position: absolute;
+    top: 340px;
+    left: 850px;
+    width: 73px;
+    height: 73px;
+}
+
+#thumbsdown {
+    background-image: url('../img/thumbsdown.png');
+    position: absolute;
+    top: 340px;
+    left: 150px;
+    width: 73px;
+    height: 73px;
+    background-position-y: -10px;
+}
+
+#badrating {
+    position: absolute;
+    font-family: elkjopregular;
+    top: 275px;
+    left: 155px;
+    text-align: center;
+    color: white;
+    line-height: 73px;
+    font-size: 28px;
+    background-image: none;
+    width: auto;
+}
+
+#goodrating {
+    position: absolute;
+    font-family: elkjopregular;
+    top: 415px;
+    left: 742px;
+    text-align: center;
+    color: white;
+    line-height: 73px;
+    font-size: 28px;
+    background-image: none;
+    width: auto;
+}
+
+/* 2 */
+
+/* 3 */
+
+/* 5 */
+
+/* 6 */
+#html6 #gavekortet{
+    background-color: #88D100;
+    font-family: elkjopregular;
+    font-size: 36px;
+    top: 300px;
+    padding: 20px;
+    left: 40px;
+    color: #051853;
+    width: 904px;
+    text-align: center;
+}
+
+/* 7 */
+
+/* 8 */
+
+/* 9 */
+#html9 #question {
+    top: 110px;
+}
+#html9 #aditionaltext2 {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    width: 730px;
+    left: 130px;
+}  
+
+#html9 #aditionaltext1 {
+    left: 274px;
+}
+
+#html9 #aditionaltext1,
+#html9 #aditionaltext2,
+#html9 #member {
+    color: #ffffff;
+}
+
+#html9 ::-webkit-input-placeholder {
+    color: white;
+}
+
+#html9 .contact::-webkit-input-placeholder {
+    padding-top: 15px !important;
+}
+
+#html9 .phone-check {
+    border: 4px solid #2F2F2F;
+    color: #2F2F2F;
+}
+
+/* 10 */
+#html10 #question {
+    top: 125px;
+}
+
+/* 11 */
+
+/* 12 */
+
+/* 13 */
+#html13 #question2 {
+    top: 300px;
+    color:white;
+    font-size: 25px
+}
+
+#html13 #code {
+    top:370px
+}
+
+/* 9 - 13*/
+#html9 .warning,
+#html13 .warning {
+    border: 4px solid red;
+    color: red;    
+}
+
